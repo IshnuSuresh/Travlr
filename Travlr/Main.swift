@@ -67,7 +67,7 @@ struct Main:View{
                 Spacer()
                 
                 Button{
-                    
+                    viewRouter.currentPage = .finalSuggestion
                 } label: {
                     Image("refreshIcon")
                         .resizable().aspectRatio(contentMode: .fit).frame(width: 50, height: 50, alignment: .center)
@@ -95,10 +95,10 @@ struct Main_Previews: PreviewProvider{
 
 struct CardView: View {
     @State var card: Card
-    let cardGradient = Gradient(colors: [Color.black.opacity(0), Color.black.opacity(0.5)])
+    let cardGradient = Gradient(colors: [Color.black.opacity(0), Color.black.opacity(1)])
     var body: some View {
         ZStack(alignment: .topLeading){
-            Image(card.imageName).resizable().aspectRatio(contentMode: .fill)
+            Image(card.imageName).resizable().aspectRatio(contentMode: .fit)
             LinearGradient(gradient: cardGradient, startPoint: .top, endPoint: .bottom)
             VStack{
                 Spacer()

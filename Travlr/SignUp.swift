@@ -6,14 +6,29 @@
 //
 
 import SwiftUI
+import FirebaseAuth
+
+class AppViewModel: ObservableObject{
+    
+    var isSignedIn: Bool{
+        return Auth.auth().currentUser != nil
+    }
+    
+    func signUp(email: String, password: String){
+        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+            guard result != nil, error == nil else{
+                return
+            }
+            //Success
+        }
+    }
+}
 
 struct SignUp:View{
+    @StateObject var viewModel: AppViewModel
     @StateObject var viewRouter: ViewRouter
+    @ObservedObject var Information: userInformationModel
     @State var isLoginMode = false
-    @State var emailAdress: String = ""
-    @State var password: String = ""
-    @State var age: String = ""
-    @State var sex: String = ""
     
     var body: some View{
         ZStack{
@@ -47,7 +62,7 @@ struct SignUp:View{
                 .padding()
                 
                 VStack{
-                    TextField("Email Address", text: $emailAdress)
+                    TextField("Email Address", text: $Information.emailAddress)
                         .textInputAutocapitalization(.never)
                         .disableAutocorrection(true)
                         .padding(.vertical, 20)
@@ -58,7 +73,7 @@ struct SignUp:View{
                                 .padding(.horizontal, -5)
                         )
                         .padding(.vertical, 10)
-                    SecureField("Password", text: $password)
+                    SecureField("Password", text: $Information.password)
                         .textInputAutocapitalization(.never)
                         .disableAutocorrection(true)
                         .padding(.vertical, 20)
@@ -69,39 +84,12 @@ struct SignUp:View{
                                 .padding(.horizontal, -5)
                         )
                         .padding(.vertical, 10)
-                    
-                    HStack{
-                        Spacer()
-                        TextField("Age", text: $age)
-                            .textInputAutocapitalization(.never)
-                            .disableAutocorrection(true)
-                            .padding(.vertical, 20)
-                            .frame(width: 170, height: 60, alignment: .center)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color("Colour3"), lineWidth: 3)
-                                    .padding(.horizontal, -5)
-                            )
-                            .padding(.vertical, 10)
-                        Spacer()
-                        TextField("Sex", text: $sex)
-                            .textInputAutocapitalization(.never)
-                            .disableAutocorrection(true)
-                            .padding(.vertical, 20)
-                            .frame(width: 170, height: 60, alignment: .center)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color("Colour3"), lineWidth: 3)
-                                    .padding(.horizontal, -5)
-                            )
-                            .padding(.vertical, 10)
-                        Spacer()
-                    }
                 }
                 
                 Button{
                     //Firebase Connection and Submission
-                    viewRouter.currentPage = .login
+                    viewModel.signUp(email: Information.emailAddress, password: Information.password)
+                    viewRouter.currentPage = .userInformation
                 } label: {
                     Text("Create an Account")
                         .padding(.all)
@@ -121,6 +109,6 @@ struct SignUp:View{
 
 struct SignUp_Previews: PreviewProvider{
     static var previews: some View{
-        SignUp(viewRouter: ViewRouter())
+        SignUp(viewModel: AppViewModel(), viewRouter: ViewRouter(), Information: userInformationModel())
     }
 }

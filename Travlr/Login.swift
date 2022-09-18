@@ -5,10 +5,11 @@
 //  Created by Ishnu Suresh on 2022-09-17.
 //
 
-import Foundation
 import SwiftUI
+import FirebaseAuth
 
 struct Login:View{
+    @EnvironmentObject var viewModel: AppViewModel
     @StateObject var viewRouter: ViewRouter
     @State var isLoginMode = false
     @State var emailAdress: String = ""
@@ -36,6 +37,9 @@ struct Login:View{
                     
                     Text("Login")
                         .tag(false)
+                        .onTapGesture {
+                            isLoginMode = true
+                        }
                 } label: {
                     Text("Logged In or Sign Up?")
                 }
@@ -69,7 +73,10 @@ struct Login:View{
                 
                 Button{
                     //Firebase Connection and Submission
-                    viewRouter.currentPage = .main
+                    guard !emailAdress.isEmpty, !password.isEmpty else{
+                        return
+                    }
+                    signIn(email: emailAdress, password: password)
                 } label: {
                     Text("Login")
                         .padding(.all)
@@ -83,6 +90,24 @@ struct Login:View{
                 
                 Spacer()
             }
+        }
+    }
+    func signIn(email: String, password: String){
+        Auth.auth().signIn(withEmail: email, password: password) { result, error in
+            guard result != nil, error == nil else{
+                return
+            }
+            
+            switch result {
+            case .none:
+                print("Could not sign in user.")
+            case .some(_):
+                print("User signed in")
+                withAnimation {
+                    viewRouter.currentPage = .preferences
+                }
+            }
+            //Success
         }
     }
 }

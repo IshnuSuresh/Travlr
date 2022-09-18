@@ -16,4 +16,7 @@ enum Page{
     case login
     case signUp
     case main
+    case userInformation
+    case preferences
+    case finalSuggestion
 }
