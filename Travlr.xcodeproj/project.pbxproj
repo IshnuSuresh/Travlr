@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9134934E28D618730085E9F5 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9134934D28D618730085E9F5 /* ViewRouter.swift */; };
+		9134935028D61A870085E9F5 /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9134934F28D61A870085E9F5 /* MotherView.swift */; };
+		9134935228D61B1D0085E9F5 /* GetStarted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9134935128D61B1D0085E9F5 /* GetStarted.swift */; };
+		9134935528D625790085E9F5 /* hk-grotesk in Resources */ = {isa = PBXBuildFile; fileRef = 9134935428D625790085E9F5 /* hk-grotesk */; };
+		913493D728D6A6940085E9F5 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913493D628D6A6940085E9F5 /* Login.swift */; };
+		913493D928D6A69B0085E9F5 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913493D828D6A69B0085E9F5 /* SignUp.swift */; };
+		913493DB28D6A8C00085E9F5 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913493DA28D6A8C00085E9F5 /* Main.swift */; };
+		913493DF28D6AB2B0085E9F5 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913493DE28D6AB2B0085E9F5 /* Card.swift */; };
 		9169B59628D601F00099D849 /* TravlrApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9169B59528D601F00099D849 /* TravlrApp.swift */; };
-		9169B59828D601F00099D849 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9169B59728D601F00099D849 /* ContentView.swift */; };
 		9169B59A28D601F40099D849 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9169B59928D601F40099D849 /* Assets.xcassets */; };
 		9169B59D28D601F40099D849 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9169B59C28D601F40099D849 /* Preview Assets.xcassets */; };
 		9169B5A728D601F40099D849 /* TravlrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9169B5A628D601F40099D849 /* TravlrTests.swift */; };
@@ -34,9 +41,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9134934D28D618730085E9F5 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		9134934F28D61A870085E9F5 /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
+		9134935128D61B1D0085E9F5 /* GetStarted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStarted.swift; sourceTree = "<group>"; };
+		9134935328D6244A0085E9F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9134935428D625790085E9F5 /* hk-grotesk */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "hk-grotesk"; sourceTree = "<group>"; };
+		913493D628D6A6940085E9F5 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		913493D828D6A69B0085E9F5 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		913493DA28D6A8C00085E9F5 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		913493DE28D6AB2B0085E9F5 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		9169B59228D601F00099D849 /* Travlr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travlr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9169B59528D601F00099D849 /* TravlrApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravlrApp.swift; sourceTree = "<group>"; };
-		9169B59728D601F00099D849 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9169B59928D601F40099D849 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9169B59C28D601F40099D849 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9169B5A228D601F40099D849 /* TravlrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravlrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,8 +109,16 @@
 		9169B59428D601F00099D849 /* Travlr */ = {
 			isa = PBXGroup;
 			children = (
+				9134935328D6244A0085E9F5 /* Info.plist */,
+				9134935428D625790085E9F5 /* hk-grotesk */,
 				9169B59528D601F00099D849 /* TravlrApp.swift */,
-				9169B59728D601F00099D849 /* ContentView.swift */,
+				9134934F28D61A870085E9F5 /* MotherView.swift */,
+				9134935128D61B1D0085E9F5 /* GetStarted.swift */,
+				913493D628D6A6940085E9F5 /* Login.swift */,
+				913493D828D6A69B0085E9F5 /* SignUp.swift */,
+				9134934D28D618730085E9F5 /* ViewRouter.swift */,
+				913493DA28D6A8C00085E9F5 /* Main.swift */,
+				913493DE28D6AB2B0085E9F5 /* Card.swift */,
 				9169B59928D601F40099D849 /* Assets.xcassets */,
 				9169B59B28D601F40099D849 /* Preview Content */,
 			);
@@ -231,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9134935528D625790085E9F5 /* hk-grotesk in Resources */,
 				9169B59D28D601F40099D849 /* Preview Assets.xcassets in Resources */,
 				9169B59A28D601F40099D849 /* Assets.xcassets in Resources */,
 			);
@@ -257,8 +281,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9169B59828D601F00099D849 /* ContentView.swift in Sources */,
+				913493D928D6A69B0085E9F5 /* SignUp.swift in Sources */,
+				9134934E28D618730085E9F5 /* ViewRouter.swift in Sources */,
+				9134935028D61A870085E9F5 /* MotherView.swift in Sources */,
+				913493D728D6A6940085E9F5 /* Login.swift in Sources */,
+				9134935228D61B1D0085E9F5 /* GetStarted.swift in Sources */,
+				913493DB28D6A8C00085E9F5 /* Main.swift in Sources */,
 				9169B59628D601F00099D849 /* TravlrApp.swift in Sources */,
+				913493DF28D6AB2B0085E9F5 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,8 +447,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Travlr/Preview Content\"";
+				DEVELOPMENT_TEAM = BF79P7TU4J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Travlr/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -445,8 +477,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Travlr/Preview Content\"";
+				DEVELOPMENT_TEAM = BF79P7TU4J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Travlr/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -472,6 +506,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BF79P7TU4J;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
@@ -491,6 +526,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BF79P7TU4J;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
@@ -509,6 +545,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BF79P7TU4J;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.IshnuSuresh.TravlrUITests;
@@ -526,6 +563,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BF79P7TU4J;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.IshnuSuresh.TravlrUITests;
